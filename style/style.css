@@ -7,6 +7,11 @@
     --black: black;
     --white: #fff;
     --light-grey: #dfdfdf;
+    --base-font: 16px;
+}
+
+html{
+    font-size: var(--base-font);
 }
 
 body {
@@ -19,24 +24,38 @@ body {
 .container{
     display:flex;
     width: 608px;
-    height: 849px;
+    height: auto;
     margin: auto;
     background-color: var(--white);
 }
 
 .left-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     flex-basis: 40%;
-    height: 100%
 }
 
 .right-column{
     flex-basis: 60%;
-    height: 100%;
 }
 
 /****************** LEFT COLUMN ******************/
 
 
+/* TRAIT AFTER  */
+
+.contactme::after, .knowledge::after, .education::before{
+    content: "";
+    position: absolute;
+    background-color: var(--pink);
+    top: 20px;
+    width: 50px;
+    height: 6px;
+    right: -11px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 
 /* About */
 
@@ -46,14 +65,13 @@ body {
     width: 85%;
     height: 85%;
     bottom: 0;
-    top: 12%;
-    margin: auto;
+    margin: 0 auto 20px;
     border-radius: 10px;
 }
 
 .about-container img {
     position: absolute;
-    top: -60px;
+    top: -70px;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
@@ -67,7 +85,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    top: 18%;
+    top: 15%;
     width: 85%;
     padding: 20px;
     color: var(--white);
@@ -75,7 +93,7 @@ body {
 }
 
 article{
-    margin-bottom: 30px
+    margin-bottom: 15px
 }
 
 /* CONTACT ME */
@@ -84,20 +102,8 @@ article{
     position: relative;
 }
 
-.contactme::after{
-    content: "";
-    position: absolute;
-    background-color: var(--pink);
-    top: 20px;
-    width: 50px;
-    height: 6px;
-    right: -11px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
 .about-sections H2{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .about-sections ul {
@@ -113,7 +119,7 @@ article{
 }
 
 .about-sections ul li{
-    font-size: 8px;
+    font-size: 0.5rem;
     margin-bottom: 5px;;
 }
 
@@ -124,17 +130,6 @@ article{
     position: relative;
 }
 
-.knowledge::after{
-    content: "";
-    position: absolute;
-    background-color: var(--pink);
-    top: 20px;
-    width: 50px;
-    height: 6px;
-    right: -11px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
 
 .skill-title {
     margin-top: 5px;
@@ -169,20 +164,10 @@ article{
     margin-bottom: 0;
 }
 
-.education::before{
-    content: "";
-    position: absolute;
-    background-color: var(--pink);
-    top: 20px;
-    width: 50px;
-    height: 6px;
-    right: -11px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
+
 
 .education-section, .education-year{
-    font-size: 8px;
+    font-size: 0.5rem;
 }
 
 .education-section{
@@ -194,7 +179,7 @@ article{
 }
 
 .education-section h3{
-    font-size: 10px;
+    font-size: 0.6rem;
     color: var(--pink);
     margin-top: 5px;
     margin-bottom: 5px;
@@ -208,23 +193,23 @@ article{
 .content-container {
     padding: 10px;
     padding-right: 25px;
-    margin-top: 30px
+    margin-top: 20px
 }
 
 .content-container H1{
     margin-top: 0;
     margin-bottom: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .content-container H3{
     margin-top: 8px;
-    font-size: 12px;
+    font-size: 0.7rem;
     color: var(--pink);
 }
 
 .content-container p{
-    font-size: 8px;
+    font-size: 0.5rem;
     line-height: 12px;
 }
 
@@ -256,14 +241,14 @@ article{
     background-color: var(--pink);
     color: var(--white);
     text-align: center;
-    font-size: 8px;
+    font-size: 0.5rem;
     border-radius: 5px;
     padding: 5px;
     margin-right: 8px;
 }
 
 .square-text{
-    font-size: 8px;
+    font-size: 0.5rem;
 }
 
 
@@ -274,7 +259,7 @@ article{
 }
 
 .work-experiences-section{
-    margin-top: 30px;
+    margin-top: 15px;
     position: relative;
 }
 
@@ -291,7 +276,7 @@ article{
 }
 
 .work-experiences-section H2{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .work-experiences{
@@ -346,23 +331,23 @@ article{
 }
 
 .work-year{
-    font-size: 10px;
+    font-size: 0.7rem;
     font-weight: bold;
     color: var(--pink);
 }
 
 .work-experience H4{
-    font-size: 12px;
+    font-size: 0.8rem;
     margin: 0;
 }
 
 .work-experience span{
-    font-size: 10px;
+    font-size: 0.7rem;
 }
 
 .work-experience p{
     margin-top: 4px;
-    font-size: 7px;
+    font-size: 0.4rem;
     line-height: 11px;
     margin-bottom: px;
 }
@@ -373,7 +358,7 @@ article{
 }
 
 .work-experience li{
-    font-size: 7px;
+    font-size: 0.4rem;
     list-style: square;
 }
 
@@ -396,13 +381,13 @@ article{
 }
 
 .references-section H2{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .reference-section{
 
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .reference{
@@ -417,12 +402,12 @@ article{
 }
 
 .reference-content H3{
-    font-size: 10px;
+    font-size: 0.6rem;
     margin-top: 0;
 }
 
 .reference-content p{
-    font-size: 7px;
+    font-size: 0.4rem;
     margin: 1px;
 }
 
