@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poller+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@page {
+    size: A4;
+} 
+
 :root{
     --body-font: 'Montserrat', sans-serif;
-    --pink: palevioletred;
-    --light-pink: pink;
-    --black: black;
+    --yellow: #e1b648;
+    --light-yellow: #ebd9ad;
+    --black: #141720;
     --white: #fff;
     --light-grey: #dfdfdf;
-    --base-font: 16px;
+    --base-font: 18px;
 }
 
 html{
     font-size: var(--base-font);
 }
+
+
 
 body {
     margin: 0;
@@ -24,9 +30,10 @@ body {
 .container{
     display:flex;
     width: 608px;
-    height: auto;
+    height: 900px;
     margin: auto;
     background-color: var(--white);
+    margin-top: 100px;
 }
 
 .left-column{
@@ -48,7 +55,7 @@ body {
 .contactme::after, .knowledge::after, .education::before{
     content: "";
     position: absolute;
-    background-color: var(--pink);
+    background-color: var(--yellow);
     top: 20px;
     width: 50px;
     height: 6px;
@@ -71,13 +78,13 @@ body {
 
 .about-container img {
     position: absolute;
-    top: -70px;
+    top: -104px;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
-    max-width: 180px;
-    max-height: 180px;
-    border-radius: 40px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50px;
 }
 
 .about-sections {
@@ -93,13 +100,17 @@ body {
 }
 
 article{
-    margin-bottom: 15px
+    margin-bottom: 50px
 }
 
 /* CONTACT ME */
 
 .contactme{
     position: relative;
+}
+
+.about-sections{
+    margin-top: -95px;
 }
 
 .about-sections H2{
@@ -115,16 +126,21 @@ article{
 }
 
 .big-letter{
-    margin-right: 10px;
+    color: var(--yellow);
+    font-weight: bold;
 }
 
 .about-sections ul li{
     font-size: 0.5rem;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+}
+
+.big-letter-link{
+    text-decoration: none;
+    color: var(--white);
 }
 
 /* KNOWLEDGE */
-
 
 .knowledge{
     position: relative;
@@ -135,7 +151,7 @@ article{
     margin-top: 5px;
 }
 
-.skill-section{
+.skill-point{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -150,11 +166,11 @@ article{
 }
 
 .checked {
-     background-color: var(--pink);
+     background-color: var(--yellow);
 }
 
 .unchecked {
-    background-color: var(--light-pink);
+    background-color: var(--light-yellow);
 }
 
 /* EDUCATION */
@@ -163,8 +179,6 @@ article{
     position: relative;
     margin-bottom: 0;
 }
-
-
 
 .education-section, .education-year{
     font-size: 0.5rem;
@@ -175,16 +189,19 @@ article{
 }
 
 .education-year{
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .education-section h3{
     font-size: 0.6rem;
-    color: var(--pink);
-    margin-top: 5px;
-    margin-bottom: 5px;
+    color: var(--yellow);
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
+.education-section p{
+    margin-top: 2px;
+}
 
 /****************** RIGHT COLUMN ******************/
 
@@ -193,28 +210,30 @@ article{
 .content-container {
     padding: 10px;
     padding-right: 25px;
-    margin-top: 20px
 }
 
 .content-container H1{
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: 1.5rem;
+    color: var(--black);
 }
 
 .content-container H3{
-    margin-top: 8px;
     font-size: 0.7rem;
-    color: var(--pink);
+    color: var(--yellow);
+    margin-top: 1px;
+    margin-bottom: 6px;
 }
 
 .content-container p{
     font-size: 0.5rem;
-    line-height: 12px;
+    line-height: 10px;
+    color: #141720;
 }
 
 .separator{
-    margin-top: 20px;
+    margin-top: 15px;
     height: 0.5px;
     border: none;
     background-color: var(--light-grey);
@@ -226,25 +245,24 @@ article{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .square {
     display: flex;
     justify-content: center;
     align-items: center;
-}  
-
-.pink-square{
     justify-content: center;
     align-items: center;
-    background-color: var(--pink);
-    color: var(--white);
+    color: var(--black);
     text-align: center;
     font-size: 0.5rem;
     border-radius: 5px;
     padding: 5px;
-    margin-right: 8px;
+}
+
+.yellow-square{
+    background-color: var(--yellow);
 }
 
 .square-text{
@@ -266,7 +284,7 @@ article{
 .work-experiences-section::after{
     content: "";
     position: absolute;
-    background-color: var(--pink);
+    background-color: var(--yellow);
     top: 7px;
     width: 50px;
     height: 6px;
@@ -277,6 +295,8 @@ article{
 
 .work-experiences-section H2{
     font-size: 1rem;
+    color: #141720;
+    margin-top: 5px;;
 }
 
 .work-experiences{
@@ -312,7 +332,7 @@ article{
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--pink);
+    background: var(--yellow);
 }
   
 .work-timeline{
@@ -333,23 +353,25 @@ article{
 .work-year{
     font-size: 0.7rem;
     font-weight: bold;
-    color: var(--pink);
+    color: var(--yellow);
 }
 
 .work-experience H4{
     font-size: 0.8rem;
     margin: 0;
+    color: var(--black);
 }
 
 .work-experience span{
     font-size: 0.7rem;
+    color: var(--black);
 }
 
 .work-experience p{
     margin-top: 4px;
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     line-height: 11px;
-    margin-bottom: px;
+    color: var(--black);
 }
 
 .work-experience ul{
@@ -358,20 +380,21 @@ article{
 }
 
 .work-experience li{
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     list-style: square;
+    color: var(--black);
 }
 
-/* REFERENCES */
+/* skillS */
 
-.references-section{
+.skills-section{
     position: relative;
 }
 
-.references-section::after {
+.skills-section::after {
     content: "";
     position: absolute;
-    background-color: var(--pink);
+    background-color: var(--yellow);
     top: 7px;
     width: 50px;
     height: 6px;
@@ -380,35 +403,51 @@ article{
     border-bottom-left-radius: 5px;
 }
 
-.references-section H2{
+.skills-section H2{
     font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 30px;
 }
 
-.reference-section{
-
+.skill-section{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 10px;
 }
 
-.reference{
+.skill{
     display: flex;
     align-items: start;
     margin-right: 20px;
+    max-width: 150px;
 }
 
-.icon-reference svg{
-    fill: var(--pink);
-    margin-right: 10px;
+.icon-skill svg{
+    fill: var(--yellow);
+    margin-right: 20px;
 }
 
-.reference-content H3{
+.skill-content H3{
     font-size: 0.6rem;
-    margin-top: 0;
+    margin-top: 2px;
+    margin-bottom: 0;
+    color: var(--black);
 }
 
-.reference-content p{
+.skill-content p{
     font-size: 0.4rem;
     margin: 1px;
+}
+
+
+.skill-ul{
+    padding-left: 12px;
+    margin-top: 7px;
+}
+
+.skill-content ul li{
+    font-size: 0.6rem;
+    list-style-type: square;
 }
 
 
