@@ -230,6 +230,7 @@ article {
 .education-section-list{
     margin-left: 15px;
     list-style-type: square;
+    color: var(--white);
     
 }
 
@@ -251,12 +252,12 @@ article {
 .content-container {
     padding: 10px;
     padding-right: 25px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .content-container H1 {
     margin-top: 0;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     font-size: 1.5rem;
     color: var(--black);
 }
@@ -265,7 +266,7 @@ article {
     font-size: 0.8rem;
     color: var(--yellow);
     margin-top: 1px;
-    margin-bottom: 6px;
+    margin-bottom: 15px;
 }
 
 .content-container p {
@@ -278,38 +279,29 @@ article {
     margin-bottom: 15px;
 }
 
+
+.link-portfolio {
+    float: right;
+    margin-top: -97px;
+}
+
 /* LINK SECTION */
 
 .link-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 0px;
 }
 
-.square {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    color: var(--black);
-    text-align: center;
-    font-size: 0.5rem;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.yellow-square {
-    background-color: var(--yellow);
-}
-
-.square-text {
-    font-size: 0.5rem;
+.link-portfolio img{
+    width: 60px;
+    height: 60px;
+    margin-top: -25px;
 }
 
 
-/* WORK EXPERIENCE */
+/* WORK EXPERIENCE SECTION */
 
 .work-container {
     display: flex;
@@ -317,7 +309,7 @@ article {
 
 .work-experiences-section {
     position: relative;
-    margin-top: 25px;
+    margin-top: 18px;
 }
 
 .work-experiences-section::after {
@@ -358,7 +350,6 @@ article {
 .work-experience {
     position: relative;
     padding-top: 8px;
-    margin-bottom: 10px;
 }
 
 .experience-1 .experience-2 {
@@ -435,7 +426,7 @@ article {
     color: var(--black);
 }
 
-/* skillS */
+/* HARD SKILLS SECTION */
 
 .skills-section {
     position: relative;
@@ -456,14 +447,13 @@ article {
 .skills-section H2 {
     font-size: 1rem;
     color: var(--black);
-    margin-top: 38px;
-    margin-bottom: 30px;
+    margin-top: 5px;
+    margin-bottom: 40px;
 }
 
 .skill-section {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
 }
 
 .skill {
@@ -482,7 +472,7 @@ article {
     display: flex;
     flex-direction: column; 
     flex: 1; 
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .skill-content H3 {
@@ -502,12 +492,66 @@ article {
 .skill-ul {
     padding-left: 12px;
     margin: 0; 
-    margin-top: 5px;
+    margin-top: 3px;
     margin-left: 10px;
 }
 
 .skill-content ul li {
     font-size: 0.6rem;
-    margin-bottom: 3px; 
+    margin-bottom: 1px; 
     list-style-type: square;
 }
+
+/* PROJECT SECTION */
+
+.project-section{
+    position: relative;
+}
+
+.project-section::before,
+.project-section::after {
+    content: "";
+    position: absolute;
+    background-color: var(--yellow);
+    top: 7px;
+    width: 50px;
+    height: 6px;
+    right: -25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.project-section H2 {
+    font-size: 1rem;
+    color: var(--black);
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.project-list ul{
+    font-size: 0.5rem;
+    padding-left: 35px;
+}
+
+.project-list ul li{
+    margin-bottom: 15px; 
+    margin-left: ;
+    list-style-type: square;
+}
+
+.project-name{
+    margin-bottom: 5px;
+}
+
+.project-list ul li .project-skills{
+    margin-top: 5px;
+}
+
+.project-skills svg{
+    fill: var(--yellow);
+    font-size: 9px;
+    flex: 0 0 24px;
+    margin-right: 5px;
+}
+
+
