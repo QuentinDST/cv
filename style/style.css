@@ -30,6 +30,27 @@ body {
     font-family: var(--body-font);
 }
 
+.update-button{
+    display: flex; 
+    justify-content: center;
+    padding: 30px;
+}
+
+.update-button button{
+    padding: 2px 10px;
+    border-radius: 3px;
+    background-color: var(--white);
+    font-family: var(--base-font);
+    transition: all ease-in 0.5s;
+}
+
+.update-button button:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+
+
 .container {
     display: flex;
     width: var(--page-width);
