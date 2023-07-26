@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/style/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>CV Quentin Destrade</title>
 </head>
 
 <body>
-    <main class="container">
+    <button id="download-pdf">Télécharger en PDF</button>
+    <main class="container" id="cv-quentin-destrade">
         <aside class="left-column">
             <div class="about-container">
                 <img src="/images/profil.png" alt="">
@@ -19,7 +21,7 @@
                         <H2>Contact Me</H2>
                         <ul>
                             <li>
-                                <span class="big-letter">4 </span>rue du roc de la dame 48100 Montrodat
+                                <span class="big-letter">36 </span>Allée du Mont Cassin 34000 MONTPELLIER
                             </li>
                             <li>
                                 <span class="big-letter">q</span>uentin.dstre@gmail.com
@@ -29,7 +31,7 @@
                                         class="big-letter">www</span>.quentindestrade.netlify.app</a>
                             </li>
                             <li>
-                                <span class="big-letter">0</span>610935022
+                                <span class="big-letter">+33</span>610935022
                             </li>
                         </ul>
                     </article>
@@ -115,6 +117,22 @@
                                     <div class="unchecked"></div>
                                 </div>
                             </li>
+
+                            <li>
+                                <span class="skill-title">Ponctualité</span>
+                                <div class="skill-point">
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                    <div class="checked"></div>
+                                </div>
+                            </li>
                         </ul>
                     </article>
 
@@ -122,9 +140,19 @@
                         <H2>Education</H2>
 
                         <div class="education-section">
-                            <div class="education-year">2022 - 2023</div>
+                            <div class="education-year">Octobre 2022 - Juillet 2023</div>
                             <h3>Titre Professionnel Développeur Web et Web Mobile</h3>
                             <p>Greta Mende - 48000</p>
+                            <ul>
+                                <li class="education-section-list">Développer une interface web utilisateur statique ou
+                                    dynamique & responsive</li>
+                                <li class="education-section-list">Créer une base de données et développer les
+                                    composants d'accès à ses données</li>
+                                <li class="education-section-list">Développer la partie Back-end d'une application web
+                                    ou web mobile</li>
+                                <li class="education-section-list">Elaborer et mettre en oeuvre des composants dans une
+                                    application de gestion de contenu ou e-commerce</li>
+                            </ul>
                         </div>
 
                         <div class="education-section">
@@ -147,78 +175,63 @@
             <div class="content-container">
                 <div class="bio-section">
                     <H1>Quentin Destrade</H1>
-                    <H3>Developpeur Web Full Stack</H3>
-                    <p>Animé par la recherche de solutions efficientes, performantes et esthetique, je suis un
-                        developpeur alliant à la fois Front & Back. 
-                        En quête constant de créativité et de technicité,
-                        mon objectif est de pouvoir créer des applications dynamique et sécurisée. Ma motivation et mon
-                        sens du détail me permettent aujourd'hui de livrer des résultats audacieux et d'assurer une
-                        réponse sérieuse aux besoins de chaque projet. Ensemble, créons des interfaces
+                    <H3>Developpeur Web Junior Full Stack</H3>
+                    <p class="bio-section-text">Animé par la recherche de solutions esthétiques, performantes et efficientes, je suis un jeune
+                        développeur maîtrisant à la fois les aspects Front & Back.</p>
+                    <p>En quête constante de créativité et de technicité,
+                        mon objectif est de pouvoir mettre les compétences acquises tout au long de mon apprentissage au
+                        sein d'une entreprise qui aura l'audace de laisser sa chance à un jeune développeur avec peu
+                        d'expérience certes, mais très motivé à l'idée d'apprendre et de découvrir au travers de projets
+                        ambitieux et concrets.
                     </p>
                 </div>
 
-                <hr class="separator">
-
-                <div class="link-section">
-                    <div class="square">
-                        <div class="yellow-square"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></div>
-                        <span class="square-text">Quentin Destrade</span>
-                    </div>
-
-                    <div class="square">
-                        <div class="yellow-square"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></div>
-                        <span class="square-text">Quentin Destrade</span>
-                    </div>
-
-                    <div class="square">
-                        <div class="yellow-square">Bé</div>
-                        <span class="square-text">Quentin Destrade</span>
-                    </div>
-                </div>
-
-                <hr class="separator">
-
                 <div class="work-experiences-section">
-                    <h2>Work Experience</h2>
+                    <h2>Work Experiences</h2>
 
                     <div class="work-container">
 
                         <div class="work-experiences">
                             <div class="work-experience">
-                                <div class="work-year">2023 - 2023</div>
-                                <h4>Developpeur Web</h4>
-                                <span>BM-Services - La Canourgue </span>
+                                <div class="work-year">Avril 2023 - Juillet 2023</div>
+                                <h4>Stage Developpeur Web</h4>
+                                <span>BM-Services - La Canourgue ( 48 )</span>
                                 <p>Stagiaire développeur web / intégrateur chez BM-Services durant 12 semaines.
                                     Expérience pratique avec Wordpress et Prestashop. Developpement PHP, JavaScript et
                                     SCSS, couplée à une introduction au Webmarketing. </p>
-                                <ul>
-                                    <li>PHP / JavaScript / SCSS</li>
-                                    <li>WordPress</li>
-                                    <li>GIT / Heidi SQL</li>
-                                    <li>Google Analytics 4 / Google Tag Manager / Axeptio Cookies</li>
+                                <ul class="work-experience-list">
+                                    <li><b>WordPress</b> - Création d'un plugin d'import d'abonnés entre 2 modules Leaky Paywall et MemberPress à partir d'un fichier CSV  |  PHP WORDPRESS</li>
+                                    <li><b>WordPress</b> - Intégration d'un site WooCommerce "les truites de Saint Frézal" et réalisation d'un plugin de Click and Collect</li>
+                                    <li><b>Front</b> - Apporter des améliorations et des fonctionnalités interactives souhaité par différent clients, en utilisant JS, HTML et CSS sur différents sites web</li>
+                                    <li><b>Webmarketing</b> - Installation et paramétrage des modules Google Tag Manager, Google Analytics 4, Matomo, avec paramétrage des balises de suivis de conversion</li>
                                 </ul>
                             </div>
 
                             <div class="work-experience experience-1">
-                                <div class="work-year">2012 - 2021</div>
+                                <div class="work-year">Mai 2012 - Avril 2021</div>
                                 <h4>Patissier - Assistant dirigeant d'entreprise artisanale</h4>
-                                <span>Cafés & Gourmandises</span>
+                                <span>Cafés & Gourmandises - Montpellier ( 34 )</span>
+                                <p>Responsable magasin et patissier de la patisserie Cafés & gourmandises à Montpellier.</p>
                                 <ul>
-                                    <li>Managment interne</li>
-                                    <li>Gestion des stocks</li>
-                                    <li>Gestion caisse</li>
-                                    <li>Relation clients</li>
-                                    <li>Formation HACCP</li>
+                                    <li><b>Management interne</b></li>
+                                    <li><b>Gestion des stocks</b></li>
+                                    <li><b>Gestion caisse</b></li>
+                                    <li><b>Relation client</b></li>
+                                    <li><b>Formation HACCP</b></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="skills-section">
-                    <h2>Skills</h2>
+                    <h2>Hard Skills</h2>
                     <div class="skill-section">
                         <div class="skill">
-                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 640 512">
+                                    <path
+                                        d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
+                                </svg>
                             </div>
                             <div class="skill-content">
                                 <H3>LANGAGE</H3>
@@ -232,9 +245,14 @@
                         </div>
 
                         <div class="skill">
-                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></svg></div>
+                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z" />
+                                </svg>
+                                </div>
                             <div class="skill-content">
-                                <H3>BASE DE DONNEES</H3>
+                                <H3>BASE DE DONNEE</H3>
                                 <ul class="skill-ul">
                                     <li class="skill-li">Merise MCD</li>
                                     <li class="skill-li">SQL</li>
@@ -244,7 +262,11 @@
                         </div>
 
                         <div class="skill">
-                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"/></svg></div>
+                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z" />
+                                </svg></div>
                             <div class="skill-content">
                                 <H3>CMS</H3>
                                 <ul class="skill-ul">
@@ -255,7 +277,11 @@
                         </div>
 
                         <div class="skill">
-                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg></div>
+                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z" />
+                                </svg></div>
                             <div class="skill-content">
                                 <H3>OUTILS</H3>
                                 <ul class="skill-ul">
@@ -267,7 +293,11 @@
                         </div>
 
                         <div class="skill">
-                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z"/></svg></div>
+                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L204.6 9c11.7-6.6 27.2-6.6 38.8 0l184.7 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-210.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 92-23.2 92-63.4z" />
+                                </svg></div>
                             <div class="skill-content">
                                 <H3>FRAMEWORK FRONT</H3>
                                 <ul class="skill-ul">
@@ -278,7 +308,11 @@
                         </div>
 
                         <div class="skill">
-                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm133.74 143.54c-11.47.41-19.4-6.45-19.77-16.87-.27-9.18 6.68-13.44 6.53-18.85-.23-6.55-10.16-6.82-12.87-6.67-39.78 1.29-48.59 57-58.89 113.85 21.43 3.15 36.65-.72 45.14-6.22 12-7.75-3.34-15.72-1.42-24.56 4-18.16 32.55-19 32 5.3-.36 17.86-25.92 41.81-77.6 35.7-10.76 59.52-18.35 115-58.2 161.72-29 34.46-58.4 39.82-71.58 40.26-24.65.85-41-12.31-41.58-29.84-.56-17 14.45-26.26 24.31-26.59 21.89-.75 30.12 25.67 14.88 34-12.09 9.71.11 12.61 2.05 12.55 10.42-.36 17.34-5.51 22.18-9 24-20 33.24-54.86 45.35-118.35 8.19-49.66 17-78 18.23-82-16.93-12.75-27.08-28.55-49.85-34.72-15.61-4.23-25.12-.63-31.81 7.83-7.92 10-5.29 23 2.37 30.7l12.63 14c15.51 17.93 24 31.87 20.8 50.62-5.06 29.93-40.72 52.9-82.88 39.94-36-11.11-42.7-36.56-38.38-50.62 7.51-24.15 42.36-11.72 34.62 13.6-2.79 8.6-4.92 8.68-6.28 13.07-4.56 14.77 41.85 28.4 51-1.39 4.47-14.52-5.3-21.71-22.25-39.85-28.47-31.75-16-65.49 2.95-79.67C204.23 140.13 251.94 197 262 205.29c37.17-109 100.53-105.46 102.43-105.53 25.16-.81 44.19 10.59 44.83 28.65.25 7.69-4.17 22.59-19.52 23.13z"/></svg></div>
+                            <div class="icon-skill"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm133.74 143.54c-11.47.41-19.4-6.45-19.77-16.87-.27-9.18 6.68-13.44 6.53-18.85-.23-6.55-10.16-6.82-12.87-6.67-39.78 1.29-48.59 57-58.89 113.85 21.43 3.15 36.65-.72 45.14-6.22 12-7.75-3.34-15.72-1.42-24.56 4-18.16 32.55-19 32 5.3-.36 17.86-25.92 41.81-77.6 35.7-10.76 59.52-18.35 115-58.2 161.72-29 34.46-58.4 39.82-71.58 40.26-24.65.85-41-12.31-41.58-29.84-.56-17 14.45-26.26 24.31-26.59 21.89-.75 30.12 25.67 14.88 34-12.09 9.71.11 12.61 2.05 12.55 10.42-.36 17.34-5.51 22.18-9 24-20 33.24-54.86 45.35-118.35 8.19-49.66 17-78 18.23-82-16.93-12.75-27.08-28.55-49.85-34.72-15.61-4.23-25.12-.63-31.81 7.83-7.92 10-5.29 23 2.37 30.7l12.63 14c15.51 17.93 24 31.87 20.8 50.62-5.06 29.93-40.72 52.9-82.88 39.94-36-11.11-42.7-36.56-38.38-50.62 7.51-24.15 42.36-11.72 34.62 13.6-2.79 8.6-4.92 8.68-6.28 13.07-4.56 14.77 41.85 28.4 51-1.39 4.47-14.52-5.3-21.71-22.25-39.85-28.47-31.75-16-65.49 2.95-79.67C204.23 140.13 251.94 197 262 205.29c37.17-109 100.53-105.46 102.43-105.53 25.16-.81 44.19 10.59 44.83 28.65.25 7.69-4.17 22.59-19.52 23.13z" />
+                                </svg></div>
                             <div class="skill-content">
                                 <H3>FRAMEWORK BACK</H3>
                                 <ul class="skill-ul">
@@ -291,6 +325,33 @@
             </div>
         </aside>
     </main>
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', function () {
+            // Récupération de la balise <main> par son identifiant
+            const cvContent = document.getElementById('cv-quentin-destrade');
+
+            // Clonage du contenu de <main> dans un nouvel élément <div>
+            const clonedContent = cvContent.cloneNode(true);
+
+            // Création d'un nouvel élément <div> pour encapsuler le contenu cloné
+            const wrapperDiv = document.createElement('div');
+            wrapperDiv.appendChild(clonedContent);
+
+            // Options pour la génération du PDF
+            const options = {
+                filename: 'cv_quentin_destrade.pdf',
+                image: { type: 'jpeg', quality: 2 },
+                html2canvas: { scale: 7 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Génération du PDF à partir du contenu cloné
+            html2pdf().from(wrapperDiv).set(options).save();
+        });
+
+    </script>
+
+
 </body>
 
 </html>

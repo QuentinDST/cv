@@ -2,19 +2,22 @@
 
 @page {
     size: A4;
-} 
+    margin: 0;
+}
 
-:root{
+:root {
     --body-font: 'Montserrat', sans-serif;
     --yellow: #e1b648;
     --light-yellow: #ebd9ad;
     --black: #141720;
     --white: #fff;
     --light-grey: #dfdfdf;
-    --base-font: 18px;
+    --base-font: 19px;
+    --page-width: 210mm;
+    --page-height: 295mm;
 }
 
-html{
+html {
     font-size: var(--base-font);
 }
 
@@ -27,39 +30,47 @@ body {
     font-family: var(--body-font);
 }
 
-.container{
-    display:flex;
-    width: 608px;
-    height: 900px;
-    margin: auto;
+.container {
+    display: flex;
+    width: var(--page-width);
+    height: var(--page-height);
+    margin: 0 auto;
     background-color: var(--white);
-    margin-top: 100px;
+    margin-bottom: 0;
 }
 
-.left-column{
+.left-column {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    flex-basis: 40%;
+    flex-basis: calc(var(--page-width) * 0.4);
+    max-height: calc(var(--page-height) - 10px);
+    overflow: hidden;
+    page-break-inside: avoid;
 }
 
-.right-column{
-    flex-basis: 60%;
+.right-column {
+    flex-basis: calc(var(--page-width) * 0.6);
+    page-break-inside: avoid;
+    margin-bottom: 0;
 }
+
 
 /****************** LEFT COLUMN ******************/
 
 
 /* TRAIT AFTER  */
 
-.contactme::after, .knowledge::after, .education::before{
+.contactme::after,
+.knowledge::after,
+.education::before {
     content: "";
     position: absolute;
     background-color: var(--yellow);
-    top: 20px;
+    top: 24px;
     width: 50px;
     height: 6px;
-    right: -11px;
+    right: -23px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -67,7 +78,7 @@ body {
 /* About */
 
 .about-container {
-    position: relative; 
+    position: relative;
     background-color: var(--black);
     width: 85%;
     height: 85%;
@@ -92,28 +103,28 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: absolute;
-    top: 15%;
+    top: 13%;
     width: 85%;
     padding: 20px;
     color: var(--white);
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-article{
-    margin-bottom: 50px
+article {
+    margin-bottom: 30px
 }
 
 /* CONTACT ME */
 
-.contactme{
+.contactme {
     position: relative;
 }
 
-.about-sections{
+.about-sections {
     margin-top: -95px;
 }
 
-.about-sections H2{
+.about-sections H2 {
     font-size: 1rem;
 }
 
@@ -122,27 +133,27 @@ article{
     padding: 0;
     margin: 0;
     overflow: hidden;
-    
+
 }
 
-.big-letter{
+.big-letter {
     color: var(--yellow);
     font-weight: bold;
 }
 
-.about-sections ul li{
+.about-sections ul li {
     font-size: 0.5rem;
     margin-bottom: 5px;
 }
 
-.big-letter-link{
+.big-letter-link {
     text-decoration: none;
     color: var(--white);
 }
 
 /* KNOWLEDGE */
 
-.knowledge{
+.knowledge {
     position: relative;
 }
 
@@ -151,22 +162,24 @@ article{
     margin-top: 5px;
 }
 
-.skill-point{
+.skill-point {
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
-.checked, .unchecked{
+.checked,
+.unchecked {
     width: 8px;
     height: 8px;
     margin-right: 5px;
-    border-radius:  50%;
+    border-radius: 50%;
 }
 
 .checked {
-     background-color: var(--yellow);
+    background-color: var(--yellow);
 }
 
 .unchecked {
@@ -175,31 +188,38 @@ article{
 
 /* EDUCATION */
 
-.education{
+.education {
     position: relative;
     margin-bottom: 0;
 }
 
-.education-section, .education-year{
+.education-section,
+.education-year {
     font-size: 0.5rem;
 }
 
-.education-section{
+.education-section {
     margin-bottom: 15px;
 }
 
-.education-year{
+.education-year {
     margin-bottom: 2px;
 }
 
-.education-section h3{
+.education-section-list{
+    margin-left: 15px;
+    list-style-type: square;
+    
+}
+
+.education-section h3 {
     font-size: 0.6rem;
     color: var(--yellow);
     margin-top: 2px;
     margin-bottom: 2px;
 }
 
-.education-section p{
+.education-section p {
     margin-top: 2px;
 }
 
@@ -210,38 +230,36 @@ article{
 .content-container {
     padding: 10px;
     padding-right: 25px;
+    margin-top: 30px;
 }
 
-.content-container H1{
+.content-container H1 {
     margin-top: 0;
     margin-bottom: 6px;
     font-size: 1.5rem;
     color: var(--black);
 }
 
-.content-container H3{
-    font-size: 0.7rem;
+.content-container H3 {
+    font-size: 0.8rem;
     color: var(--yellow);
     margin-top: 1px;
     margin-bottom: 6px;
 }
 
-.content-container p{
+.content-container p {
     font-size: 0.5rem;
     line-height: 10px;
     color: #141720;
 }
 
-.separator{
-    margin-top: 15px;
-    height: 0.5px;
-    border: none;
-    background-color: var(--light-grey);
+.content-container .bio-section-text {
+    margin-bottom: 15px;
 }
 
 /* LINK SECTION */
 
-.link-section{
+.link-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -261,27 +279,27 @@ article{
     padding: 5px;
 }
 
-.yellow-square{
+.yellow-square {
     background-color: var(--yellow);
 }
 
-.square-text{
+.square-text {
     font-size: 0.5rem;
 }
 
 
 /* WORK EXPERIENCE */
 
-.work-container{
+.work-container {
     display: flex;
 }
 
-.work-experiences-section{
-    margin-top: 15px;
+.work-experiences-section {
     position: relative;
+    margin-top: 25px;
 }
 
-.work-experiences-section::after{
+.work-experiences-section::after {
     content: "";
     position: absolute;
     background-color: var(--yellow);
@@ -293,13 +311,14 @@ article{
     border-bottom-left-radius: 5px;
 }
 
-.work-experiences-section H2{
+.work-experiences-section H2 {
     font-size: 1rem;
     color: #141720;
-    margin-top: 5px;;
+    margin-top: 5px;
+    ;
 }
 
-.work-experiences{
+.work-experiences {
     position: relative;
     padding-left: 30px;
 }
@@ -313,10 +332,11 @@ article{
     width: 1px;
     background: var(--light-grey);
 }
-  
+
+
 .work-experience {
     position: relative;
-    padding-top:8px;
+    padding-top: 8px;
     margin-bottom: 10px;
 }
 
@@ -334,8 +354,9 @@ article{
     border-radius: 50%;
     background: var(--yellow);
 }
-  
-.work-timeline{
+
+
+.work-timeline {
     width: 1%;
     display: flex;
     flex-direction: column;
@@ -343,43 +364,51 @@ article{
     border: #918b8b 1px solid;
 }
 
-.timeline-point{
+.timeline-point {
     justify-content: space-between;
     height: 8px;
     width: 8px;
     border-radius: 50%;
 }
 
-.work-year{
+.work-year {
     font-size: 0.7rem;
     font-weight: bold;
     color: var(--yellow);
 }
 
-.work-experience H4{
+.work-experience H4 {
     font-size: 0.8rem;
     margin: 0;
     color: var(--black);
 }
 
-.work-experience span{
+.work-experience{
+    margin-bottom: 30px;
+}
+
+.work-experience span {
     font-size: 0.7rem;
     color: var(--black);
 }
 
-.work-experience p{
+.work-experience p {
     margin-top: 4px;
     font-size: 0.5rem;
     line-height: 11px;
     color: var(--black);
 }
 
-.work-experience ul{
+.work-experience ul {
     margin: 0;
     padding-left: 20px;
 }
 
-.work-experience li{
+.work-experience-list li{
+    margin-bottom: 5px;
+}
+
+.work-experience li {
     font-size: 0.5rem;
     list-style: square;
     color: var(--black);
@@ -387,7 +416,7 @@ article{
 
 /* skillS */
 
-.skills-section{
+.skills-section {
     position: relative;
 }
 
@@ -403,52 +432,61 @@ article{
     border-bottom-left-radius: 5px;
 }
 
-.skills-section H2{
+.skills-section H2 {
     font-size: 1rem;
     color: var(--black);
+    margin-top: 38px;
     margin-bottom: 30px;
 }
 
-.skill-section{
+.skill-section {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
-.skill{
+.skill {
+    flex-basis: 50%;
+    max-width: 50%;
+    box-sizing: border-box;
     display: flex;
-    align-items: start;
-    margin-right: 20px;
-    max-width: 150px;
 }
 
-.icon-skill svg{
+.icon-skill svg {
     fill: var(--yellow);
-    margin-right: 20px;
+    font-size: 19px;
+    flex: 0 0 24px;
+}
+.skill-content {
+    display: flex;
+    flex-direction: column; 
+    flex: 1; 
+    margin-bottom: 30px;
 }
 
-.skill-content H3{
+.skill-content H3 {
     font-size: 0.6rem;
     margin-top: 2px;
+    margin-left: 25px;
     margin-bottom: 0;
     color: var(--black);
 }
 
-.skill-content p{
+.skill-content p {
     font-size: 0.4rem;
     margin: 1px;
+    margin-bottom: 5px; 
 }
 
-
-.skill-ul{
+.skill-ul {
     padding-left: 12px;
-    margin-top: 7px;
+    margin: 0; 
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
-.skill-content ul li{
+.skill-content ul li {
     font-size: 0.6rem;
+    margin-bottom: 3px; 
     list-style-type: square;
 }
-
-
-
